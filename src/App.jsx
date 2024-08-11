@@ -4,6 +4,7 @@ import Landingpage from './components/Landingpage'
 import Aboutpage from './components/Aboutpage'
 import Projects from './components/Projects'
 import Projectpage1 from './components/Projectpage1'
+import Contact from './components/Contact'
 
 import LocomotiveScroll from 'locomotive-scroll';
 
@@ -20,6 +21,7 @@ function App() {
       <Projects />
       <Projectpage1 />
       <Projectpage1 />
+      <Contact />
     </div>
   )
 }

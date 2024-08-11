@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
-import Projectpage1 from '../components/Projectpage1'
 
 function Projects() {
     return (
