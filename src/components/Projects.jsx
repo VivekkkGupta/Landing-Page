@@ -3,9 +3,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Projects() {
     return (
-        <>
-            <div className='bg-black min-w-screen h-screen flex items-center justify-center'>
-                <div className='w-[80%] text-white font-matter font-bold text-[10vw] leading-none'>
+            <div data-scroll data-scroll-speed="0.4" className='sticky top-0  bg-white text-black min-w-screen h-[70vh] flex items-center justify-center z-[-9999]'>
+                <div className='w-[80%] font-matter font-bold text-[8vw] leading-none'>
                     <div className='px-[10%]'>
                         My
                     </div>
@@ -19,7 +18,7 @@ function Projects() {
                     </div>
                 </div>
             </div>
-        </>
+    
     )
 }
 

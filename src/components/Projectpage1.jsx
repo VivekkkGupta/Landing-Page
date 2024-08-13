@@ -5,7 +5,7 @@ import Milkyway3 from "../assets/videos/Milkyway_2.mp4"
 
 function Projectpage1() {
     return (
-        <div className='w-full h-screen bg-white flex items-center justify-center'>
+        <div  className=' sticky top-0 w-full h-screen bg-transparent flex items-center justify-center'>
             <div className='bg-black w-[90%] h-[90%] flex items-center justify-center rounded-[4vw] text-white font-matter'>
                 <div className='w-1/2 h-full p-10 flex items-start justify-between flex-col'>
                     <h2 className='text-[6vw] font-bold'>
