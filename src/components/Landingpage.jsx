@@ -5,7 +5,7 @@ import { IoCodeSlash } from "react-icons/io5";
 
 function Landingpage() {
     return (
-        <div data-scroll data-scroll-section data-scroll-speed="-0.5" id="page1" className='min-h-screen min-w-screen relative bg-black'>
+        <div data-scroll data-scroll-section data-scroll-speed="-0.5" id="page1" className=' z-[9] min-h-screen min-w-screen relative bg-black'>
 
             <video
                 src={Milkyway}
