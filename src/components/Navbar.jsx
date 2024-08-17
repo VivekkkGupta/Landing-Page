@@ -1,17 +1,30 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
-function Navbar() {
+function Navbar({ activeSection, setActiveSection }) {
+    const menuItems = ["Home", "About", "Projects", "Contact"]
     return (
-        <div className='fixed top-5 left-[50%] -translate-x-[50%] bg-black bg-opacity-80 backdrop-blur-sm text-white text-lg  px-10 py-3 rounded-full flex justify-center items-center font-matter z-[9999] cursor-pointer border-white'>
-            <div className='flex gap-9'>
+        <div className='z-[9999] fixed top-5 left-[50%] -translate-x-[50%] bg-black bg-opacity-80 backdrop-blur-sm text-white text-lg px-6 py-2 rounded-full flex justify-center items-center font-matter cursor-pointer'>
+            <motion.div className='flex' layout>
                 {
-                    ["Home", "About", "Projects", "Contact"].map((item, index) => (
-                        <div className='hover:text-zinc-400 transition-all duration-500 ease-in-out'>{item}</div>
+                    menuItems.map((item, index) => (
+                        <div
+                            className={`flex items-center px-8 py-2 hover:text-zinc-400 transition-all duration-500 ease-in-out
+                            ${activeSection === item.toLowerCase() ? "bg-slate-900 px-8 py-2 rounded-full backdrop-blur-lg" : ""}
+                        `}
+                            key={index}
+                            onClick={(e) => setActiveSection((e.target.innerHTML).toLowerCase())}
+                        >{
+                                console.log(activeSection)
+                            }
+                            {item}
+
+                        </div>
                     ))
                 }
 
-            </div>
-        </div>
+            </motion.div>
+        </div >
     )
 }
 

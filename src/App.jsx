@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Landingpage from './components/Landingpage'
 import Aboutpage from './components/Aboutpage'
@@ -13,12 +13,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
-
+  const [activeSection, setActiveSection] = useState("home");
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <div>
-      <Navbar />
+      <Navbar activeSection={activeSection} setActiveSection={(data) => setActiveSection(data)} />
       <Landingpage />
       <Aboutpage />
       <Projects />
