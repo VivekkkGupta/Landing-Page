@@ -8,7 +8,7 @@ function Aboutpage() {
         <>
             <div className='h-[130vh] min-w-screen bg-transparent z-[-9]'>
             </div>
-            <div data-scroll data-scroll-section className='fixed top-0 w-screen h-screen bg-black text-gray-400 flex items-center justify-center  font-matter font-thin'>
+            <div className='fixed top-0 w-screen h-screen bg-black text-gray-400 flex items-center justify-center  font-matter font-thin'>
 
                 <div className='container w-full h-full flex items-center mx-[15vw] my-[10vh] absolute px-[8%] gap-10'>
                     <div className='imagediv w-1/3 flex items-center justify-center'>
