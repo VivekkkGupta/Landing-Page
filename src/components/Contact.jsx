@@ -22,20 +22,21 @@ function Contact() {
             
             <div className='w-full h-[90vh] flex'>
                 <div className='w-1/2 flex items-center justify-center'>
-                    <p className=' relative m-[5vw] text-[6vw] text-bold leading-none tracking-tight'>
-                        <h3>
+                    <div className=' relative m-[5vw] text-[6vw] text-bold leading-none tracking-tight'>
+                        <p>
                             Good things
                             happen when
                             you say <span className='underline'>hey</span>
-                        </h3>
+                        </p>
                         <span className='absolute right-5 rotate-[-30deg] hover:rotate-[-45deg] hover:right-0 transition-all duration-500 ease-in-out'>
                             <FaArrowRight />
                         </span>
-                    </p>
+                    </div>
                 </div>
                 <div className='contactmodal w-1/2 flex items-center justify-center'>
                     <div className='bg-white text-black w-[80%] h-[80%] rounded-tr-[5vw] flex items-center justify-between px-[4vw]'>
 
+<<<<<<< HEAD
                         <form onSubmit={(event)=>formSubmit(event)}>                        
                             <div className="w-full flex flex-col gap-6">
                                 <div className="w-full flex justify-between gap-10">
@@ -57,6 +58,28 @@ function Contact() {
                                         placeholder:text-gray-500 
                                         placeholder-shown:border-blue-gray-200 
                                         focus:border-gray-900 focus:outline-0 " />
+=======
+                        <div className="w-full flex flex-col gap-6">
+                            <div className="w-full flex justify-between gap-10">
+                                <input
+                                    placeholder="First Name *"
+                                    className="h-full w-full border-b border-blue-gray-500 
+                                    bg-transparent pt-4 pb-1.5 font-matter 
+                                    text-lg text-black 
+                                    outline outline-0 transition-all 
+                                    placeholder:text-gray-500 
+                                    placeholder-shown:border-blue-gray-200 
+                                    focus:border-gray-900 focus:outline-0 " />
+                                <input
+                                    placeholder="Last Name *"
+                                    className="h-full w-full border-b border-blue-gray-500 
+                                    bg-transparent pt-4 pb-1.5 font-matter 
+                                    text-lg text-black 
+                                    outline outline-0 transition-all 
+                                    placeholder:text-gray-500 
+                                    placeholder-shown:border-blue-gray-200 
+                                    focus:border-gray-900 focus:outline-0 " />
+>>>>>>> a225e67d061a99574cf2b9294c54e0ce505b584a
 
                                 </div>
                                 <div className="w-full flex justify-between gap-10">
@@ -90,7 +113,41 @@ function Contact() {
                                     </button>
                                 </div>
                             </div>
+<<<<<<< HEAD
                         </form>
+=======
+                            <div className="w-full flex justify-between gap-10">
+                                <input
+                                    placeholder="Your email address *"
+                                    className="h-full w-full border-b border-blue-gray-500 
+                                    bg-transparent pt-4 pb-1.5 font-matter 
+                                    text-lg text-black 
+                                    outline outline-0 transition-all 
+                                    placeholder:text-gray-500 
+                                    placeholder-shown:border-blue-gray-200 
+                                    focus:border-gray-900 focus:outline-0 " />
+                            </div>
+                            <div className="w-full flex justify-between gap-10">
+                                <input
+                                    placeholder="Message *"
+                                    className="h-full w-full border-b border-blue-gray-500 
+                                    bg-transparent pt-4 pb-1.5 font-matter 
+                                    text-lg text-black 
+                                    outline outline-0 transition-all 
+                                    placeholder:text-gray-500 
+                                    placeholder-shown:border-blue-gray-200 
+                                    focus:border-gray-900 focus:outline-0 " />
+                            </div>
+                            <div className='mt-5 flex items-center justify-center '>
+                                <button className='group hover:gap-3 transition-all duration-500 ease-in-out flex items-center justify-between gap-2 border-2 rounded-full px-5  py-2 bg-black text-white '>
+                                    Submit
+                                    <span className='group-hover:rotate-[-45deg] transition-all duration-500 ease-in-out'>
+                                        <FaArrowRight />
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+>>>>>>> a225e67d061a99574cf2b9294c54e0ce505b584a
 
                     </div>
                 </div>

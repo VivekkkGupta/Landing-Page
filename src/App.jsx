@@ -5,17 +5,13 @@ import Aboutpage from './components/Aboutpage'
 import Projects from './components/Projects'
 import Projectpage1 from './components/Projectpage1'
 import Contact from './components/Contact'
-import Blogs from './components/Blogs'
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
 import LocomotiveScroll from 'locomotive-scroll';
 
-gsap.registerPlugin(ScrollTrigger);
-
 function App() {
+  const [activeSection, setActiveSection] = useState("home");
 
 
-  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <div>
@@ -24,10 +20,10 @@ function App() {
       <Aboutpage />
       <Projects />
       <Projectpage1 />
-      <Blogs/>
+      <Projectpage1 />
       <Contact />
     </div>
   )
 }
 
-export default App
+export default App;
