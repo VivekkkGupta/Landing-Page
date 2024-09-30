@@ -5,8 +5,12 @@ import Aboutpage from './components/Aboutpage'
 import Projects from './components/Projects'
 import Projectpage1 from './components/Projectpage1'
 import Contact from './components/Contact'
-
+import Blogs from './components/Blogs'
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import LocomotiveScroll from 'locomotive-scroll';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
@@ -20,7 +24,7 @@ function App() {
       <Aboutpage />
       <Projects />
       <Projectpage1 />
-      <Projectpage1 />
+      <Blogs/>
       <Contact />
     </div>
   )

@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Aboutpage() {
     return (
-        <motion.div className='min-w-screen h-screen bg-black text-gray-400 flex items-center justify-center relative font-matter font-thin'>
+        <div data-scroll data-scroll-section className='min-w-screen h-screen bg-black text-gray-400 flex items-center justify-center relative font-matter font-thin'>
 
             <div className='container w-full h-full flex items-center mx-[15vw] my-[10vh] absolute px-[8%] gap-10'>
                 <div className='imagediv w-1/3 flex items-center justify-center'>
@@ -25,7 +25,7 @@ function Aboutpage() {
                     </button>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
