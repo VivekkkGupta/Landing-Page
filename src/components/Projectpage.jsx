@@ -47,7 +47,12 @@ function Projectpage({ item }) {
                         hover:bg-white hover:text-black group hover:gap-10
                         transition-all ease-in-out duration-500 flex items-center gap-6
 <<<<<<< HEAD
+<<<<<<< HEAD
                         `}>
+=======
+<<<<<<< HEAD:src/components/Projectpage1.jsx
+                        '>
+>>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
 =======
 <<<<<<< HEAD:src/components/Projectpage1.jsx
                         '>
@@ -78,7 +83,11 @@ function Projectpage({ item }) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Projectpage;
+=======
+export default Projectpage
+>>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
 =======
 export default Projectpage
 >>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e

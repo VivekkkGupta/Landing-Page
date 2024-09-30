@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 function Aboutpage() {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
         <>
@@ -36,6 +37,21 @@ function Aboutpage() {
                             <img src={vivekimage} alt="image" />
 
 >>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
+=======
+        <div data-scroll data-scroll-section className='min-w-screen h-screen bg-black text-gray-400 flex items-center justify-center relative font-matter font-thin'>
+=======
+        <>
+            <div className='h-[130vh] min-w-screen bg-transparent z-[-9]'>
+            </div>
+            <div className='fixed top-0 w-screen h-screen bg-black text-gray-400 flex items-center justify-center  font-matter font-thin'>
+>>>>>>> a225e67d061a99574cf2b9294c54e0ce505b584a
+
+                <div className='container w-full h-full flex items-center mx-[15vw] my-[10vh] absolute px-[8%] gap-10'>
+                    <div className='imagediv w-1/3 flex items-center justify-center'>
+                        <div className='bg-slate-900 w-[20vw] h-[50vh] rounded-xl overflow-hidden'>
+                            <img src={vivekimage} alt="image" />
+
+>>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
                         </div>
                     </div>
                     <div className='aboutdiv w-2/3 flex flex-col items-center justify-center gap-10'>
@@ -51,6 +67,7 @@ function Aboutpage() {
                 </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         </div>
 
@@ -58,10 +75,15 @@ function Aboutpage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
         </div>
 =======
         </>
 >>>>>>> a225e67d061a99574cf2b9294c54e0ce505b584a
+<<<<<<< HEAD
+>>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
+=======
 >>>>>>> debb39fc8d1711792e08bef599980f8737bb0e9e
     )
 }
