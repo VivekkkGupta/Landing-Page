@@ -4,21 +4,21 @@ import Landingpage from './components/Landingpage';
 import Aboutpage from './components/Aboutpage';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { useUniversalContext } from './contexts/UniversalContext';
 
 function App() {
-  const [activeSection, setActiveSection] = useState("home");
 
-
+  const { activeSection, setActiveSection } = useUniversalContext()
 
   return (
     <>
-      {/* <Cursorball /> */}
-      <div>
-        <Navbar activeSection={activeSection} setActiveSection={(data) => setActiveSection(data)} />
+      <div className='w-full min-h-screen'>
+        {/* <Cursorball /> */}
+        <Navbar />
         <Landingpage />
-        <Aboutpage />
-        <Projects />
-        <Contact />
+        {/* <Aboutpage /> */}
+        {/* <Projects /> */}
+        {/* <Contact /> */}
       </div>
     </>
   );

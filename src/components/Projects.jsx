@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaArrowRight } from "react-icons/fa";
 import Projectpage from './Projectpage';
 import Milkyway3 from "../assets/videos/Milkyway_2.mp4";
@@ -34,7 +34,7 @@ function Projects() {
         triggerOnce: false,
     });
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (inView) {
             controls.start({ scale: 1 });
         } else {
