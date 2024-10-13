@@ -1,10 +1,9 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
 
-
-
 function Projectpage({ item }) {
     const { projectname, projecttag, projectdescription, projectlink, projectpreview } = item;
+    
     return (
         <div className='sticky top-0 w-full h-screen bg-transparent flex items-center justify-center'>
             <div className='bg-black w-[90%] h-[90%] flex items-center justify-center rounded-[4vw] text-white font-matter'>
