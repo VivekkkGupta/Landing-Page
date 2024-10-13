@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Projectpage({ item }) {
     const { projectname, projecttag, projectdescription, projectlink, projectpreview } = item;
-    
+
     return (
         <div className='sticky top-0 w-full h-screen bg-transparent flex items-center justify-center'>
             <div className='bg-black w-[90%] h-[90%] flex items-center justify-center rounded-[4vw] text-white font-matter'>
@@ -26,14 +26,22 @@ function Projectpage({ item }) {
                     <p>
                         {projectdescription}
                     </p>
-                    <button href={projectlink} className={`bg-trasparent text-white rounded-full px-10 py-5 text-2xl border-2 
+
+                    <a
+                        href={projectlink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`bg-transparent text-white rounded-full px-10 py-5 text-2xl border-2 
                         hover:bg-white hover:text-black group hover:gap-10
                         transition-all ease-in-out duration-500 flex items-center gap-6
-                        ${projectlink === "" ? "pointer-events-none opacity-50" : ""}
-                        `}>
-                        <span>{projectlink === "" ? "Coming Soon" : "Visit Site"}</span>
-                        <span className='group-hover:rotate-[-45deg] text-white transition-all duration-500 ease-in-out group-hover:text-black' id="getintoucharrow"><FaArrowRight /></span>
-                    </button>
+                        ${!projectlink ? "pointer-events-none opacity-50" : ""}
+                        `}
+                    >
+                        <span>{!projectlink ? "Coming Soon" : "Visit Site"}</span>
+                        <span className='group-hover:rotate-[-45deg] text-white transition-all duration-500 ease-in-out group-hover:text-black' id="getintoucharrow">
+                            <FaArrowRight />
+                        </span>
+                    </a>
                 </div>
                 <div className='w-1/2 h-full flex items-center justify-center'>
                     <div className=' w-[85%] h-[85%] rounded-tr-[9vw] overflow-hidden'>
@@ -51,4 +59,4 @@ function Projectpage({ item }) {
     )
 }
 
-export default Projectpage
+export default Projectpage;

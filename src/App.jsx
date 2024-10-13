@@ -15,16 +15,16 @@ function App() {
   return (
     <>
       <div className='w-full min-h-screen'>
-        {/* <Cursorball /> */}
         <Navbar activeSection={activeSection} setActiveSection={(data) => setActiveSection(data)} />
-        <div>
-          <Landingpage />
-          <Aboutpage />
-          <Projects />
-          <Contact />
-        </div>
-      </>
-      );
+
+        <Landingpage />
+        <Aboutpage />
+        <Projects />
+        {/* <Projectpage /> */}
+        {/* <Contact /> */}
+      </div>
+    </>
+  );
 }
 
-      export default App;
+export default App;

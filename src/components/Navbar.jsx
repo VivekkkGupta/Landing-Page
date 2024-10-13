@@ -3,10 +3,9 @@ import { motion } from "framer-motion"
 import { useUniversalContext } from '../contexts/UniversalContext'
 import { useThemeContext } from '../contexts/ThemeContext'
 
-
 function Navbar() {
 
-    const { activeSection, setActiveSection, handleActiveSection } = useUniversalContext()
+    const { activeSection, handleActiveSection } = useUniversalContext()
     const { theme, toggleTheme } = useThemeContext()
 
     const menuItems = ["Home", "About", "Projects", "Contact"]
@@ -15,13 +14,13 @@ function Navbar() {
 
         <nav className='w-full relative'>
 
-            <div className='z-[99] fixed top-6 left-5 text-white dark:text-white border-4 p-2 bg-transparent'>
+            {/* <div className='z-[99] fixed top-6 left-5 text-white dark:text-white border-4 p-2 bg-transparent'>
                 <h2 className='font-[700] tracking-widest'>
                     VG
                 </h2>
-            </div>
+            </div> */}
 
-            <div className='z-[99] fixed top-6 right-5 text-white dark:text-white border-4 
+            <div className='z-[9999] fixed top-6 right-5 text-black bg-gray-400 dark:text-white dark:bg-slate-900 rounded-full cursor-pointer
             px-2 py-1'
                 onClick={toggleTheme}
             >
