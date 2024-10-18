@@ -6,22 +6,19 @@ import Projects from './components/Projects';
 import Projectpage from './components/Projectpage';
 import Contact from './components/Contact';
 import Blogs from './components/Blogs';
-import { useUniversalContext } from './contexts/UniversalContext';
+import { useCodeVivekUniversalContext } from './contexts/CodeVivekUniversalContext';
 
 function App() {
 
-  const { activeSection, setActiveSection } = useUniversalContext()
 
   return (
     <>
       <div className='w-full min-h-screen'>
-        <Navbar activeSection={activeSection} setActiveSection={(data) => setActiveSection(data)} />
-
+        <Navbar />
         <Landingpage />
         <Aboutpage />
         <Projects />
-        {/* <Projectpage /> */}
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </>
   );

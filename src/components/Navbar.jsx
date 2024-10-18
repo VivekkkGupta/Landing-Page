@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import { useUniversalContext } from '../contexts/UniversalContext'
+import { useCodeVivekUniversalContext } from '../contexts/CodeVivekUniversalContext'
 import { useThemeContext } from '../contexts/ThemeContext'
 
 function Navbar() {
 
-    const { activeSection, handleActiveSection } = useUniversalContext()
+    const { activeSection, handleActiveSection } = useCodeVivekUniversalContext()
     const { theme, toggleTheme } = useThemeContext()
 
     const menuItems = ["Home", "About", "Projects", "Contact"]
@@ -20,11 +20,11 @@ function Navbar() {
                 </h2>
             </div> */}
 
-            <div className='z-[9999] fixed top-6 right-5 text-black bg-gray-400 dark:text-white dark:bg-slate-900 rounded-full cursor-pointer
+            <div className='z-[999999] fixed top-6 right-5 text-black bg-gray-400 dark:text-white dark:bg-slate-900 rounded-full cursor-pointer
             px-2 py-1'
                 onClick={toggleTheme}
             >
-                <i class={`${theme === 'dark' ? "ri-moon-line" : "ri-sun-line"}`}></i>
+                <i className={`${theme === 'dark' ? "ri-moon-line" : "ri-sun-line"}`}></i>
             </div>
 
             <div className='z-[99] fixed top-5 left-[50%] -translate-x-[50%] bg-gray-300 dark:bg-black bg-opacity-80 backdrop-blur-sm text-black dark:text-white text-lg rounded-full flex justify-center items-center font-matter cursor-pointer py-2 px-2'>

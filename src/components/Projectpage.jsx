@@ -1,14 +1,35 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 function Projectpage({ item }) {
-    const { projectname, projecttag, projectdescription, projectlink, projectpreview } = item;
+    const { projectname, projecttag, projectdescription, projectlink, projectpreview, projectyear } = item;
+
+    const { scrollYProgress } = useScroll(); // Detect scroll progress
+
+    const CardWidth = useTransform(scrollYProgress, [0, 1], ['100%', '90%']);
+
+    const shrinkVariant = {
+        hidden: { scale: 1.1, opacity: 0 },
+        visible: {
+            scale: 1,
+            opacity: 1,
+            transition: { duration: 0.8, ease: "easeInOut" }
+        },
+        exit: {
+            scale: 0.9,
+            opacity: 0,
+            transition: { duration: 0.8, ease: "easeInOut" }
+        }
+    };
 
     return (
-        <div className='sticky top-0 w-full h-screen bg-transparent flex items-center justify-center'>
-            <div className='bg-black w-[90%] h-[90%] flex items-center justify-center rounded-[4vw] text-white font-matter'>
+        <motion.div className='relative w-full h-screen bg-transparent flex items-center justify-center'
+        >
+            <motion.div className='bg-black w-[80%] h-[80%] flex items-center justify-center rounded-[4vw] text-white font-matter'
+            >
                 <div className='w-1/2 h-full p-10 flex items-start justify-between flex-col'>
-                    <h2 className='text-[6vw] font-bold'>
+                    <h2 className='text-[6vw] font-bold leading-tight'>
                         {projectname}
                     </h2>
 
@@ -27,21 +48,26 @@ function Projectpage({ item }) {
                         {projectdescription}
                     </p>
 
-                    <a
-                        href={projectlink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`bg-transparent text-white rounded-full px-10 py-5 text-2xl border-2 
+                    <div className='flex justify-between items-center w-full '>
+                        <a
+                            href={projectlink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`bg-transparent text-white rounded-full px-10 py-5 text-2xl border-2 
                         hover:bg-white hover:text-black group hover:gap-10
                         transition-all ease-in-out duration-500 flex items-center gap-6
                         ${!projectlink ? "pointer-events-none opacity-50" : ""}
                         `}
-                    >
-                        <span>{!projectlink ? "Coming Soon" : "Visit Site"}</span>
-                        <span className='group-hover:rotate-[-45deg] text-white transition-all duration-500 ease-in-out group-hover:text-black' id="getintoucharrow">
-                            <FaArrowRight />
-                        </span>
-                    </a>
+                        >
+                            <span>{!projectlink ? "Coming Soon" : "Visit Site"}</span>
+                            <span className='group-hover:rotate-[-45deg] text-white transition-all duration-500 ease-in-out group-hover:text-black' id="getintoucharrow">
+                                <FaArrowRight />
+                            </span>
+                        </a>
+                        <p className='text-gray-300'>
+                            {projectyear}
+                        </p>
+                    </div>
                 </div>
                 <div className='w-1/2 h-full flex items-center justify-center'>
                     <div className=' w-[85%] h-[85%] rounded-tr-[9vw] overflow-hidden'>
@@ -54,8 +80,8 @@ function Projectpage({ item }) {
                         ></video>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

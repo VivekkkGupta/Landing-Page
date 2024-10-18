@@ -2,11 +2,14 @@ import React from 'react'
 import { motion } from "framer-motion"
 import vivekimage from "../assets/images/vivek-kerala-beach.jpg"
 import { FaArrowRight } from "react-icons/fa";
+import { useCodeVivekUniversalContext } from '../contexts/CodeVivekUniversalContext';
 
 function Aboutpage() {
+
+    const { goToContactPage } = useCodeVivekUniversalContext()
     return (
         <>
-            <div className='h-[130vh] min-w-screen bg-transparent z-[-99]'>
+            <div className='h-[130vh] min-w-screen bg-transparent z-[-99]' id="about">
             </div>
             <div className='fixed top-0 w-screen h-screen bg-black text-gray-400 flex items-center justify-center  font-matter font-thin'>
 
@@ -19,7 +22,7 @@ function Aboutpage() {
                     </div>
                     <div className='aboutdiv w-2/3 flex flex-col items-center justify-center gap-10'>
                         <h2 className='text-3xl'>I'm a <span className='font-bold text-white'>web developer</span> based in <span className='font-bold text-white'>Mumbai, Maharashtra.</span>   I specialize in <span className='font-bold text-white'>Frontend Engineering</span>, focusing on building high quality web experiences through clean code and thoughtful design. </h2>
-                        <button className='bg-trasparent text-white rounded-full px-10 py-5 text-2xl border-2 
+                        <button onClick={goToContactPage} className='bg-trasparent text-white rounded-full px-10 py-5 text-2xl border-2 
                         hover:bg-white hover:text-black group hover:gap-10
                         transition-all ease-in-out duration-500 flex items-center gap-6
                         '>

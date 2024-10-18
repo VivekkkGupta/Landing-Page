@@ -1,25 +1,39 @@
 import React from 'react'
 import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";``
+import { FaXTwitter } from "react-icons/fa6"; ``
 import { BiLogoGmail } from "react-icons/bi";
 import { FaArrowRight } from "react-icons/fa";
 
-const formSubmit = (e) =>{
+const formSubmit = (e) => {
+
+    const emailValidator = (email) => {
+        const isValidEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;;
+        if (email.match(isValidEmail)) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     e.preventDefault()
     const firstname = e.target[0].value
     const lastname = e.target[1].value
     const email = e.target[2].value
     const description = e.target[3].value
 
-    if (firstname !== "" || lastname !== "" || email !== "" || description !== ""){
-        console.log("good")
+    if (firstname !== "" && email !== "" && description !== "") {
+        console.log(emailValidator())
+        console.log({ firstname, lastname, email, description })
+    }
+    else {
+        console.log("Enter important fields")
     }
 }
 
 function Contact() {
     return (
-        <div className='relative bg-black min-h-screen min-w-screen text-white font-matter'>
-            
+        <div className='relative bg-black h-screen min-w-screen text-white font-matter' id='contact'>
+
             <div className='w-full h-[90vh] flex'>
                 <div className='w-1/2 flex items-center justify-center'>
                     <div className=' relative m-[5vw] text-[6vw] text-bold leading-none tracking-tight'>
@@ -33,10 +47,11 @@ function Contact() {
                         </span>
                     </div>
                 </div>
+
                 <div className='contactmodal w-1/2 flex items-center justify-center'>
                     <div className='bg-white text-black w-[80%] h-[80%] rounded-tr-[5vw] flex items-center justify-between px-[4vw]'>
 
-                        <form onSubmit={(event)=>formSubmit(event)}>                        
+                        <form onSubmit={(event) => formSubmit(event)}>
                             <div className="w-full flex flex-col gap-6">
                                 <div className="w-full flex justify-between gap-10">
                                     <input
@@ -49,7 +64,7 @@ function Contact() {
                                         placeholder-shown:border-blue-gray-200 
                                         focus:border-gray-900 focus:outline-0 " />
                                     <input
-                                        placeholder="Last Name *"
+                                        placeholder="Last Name"
                                         className="h-full w-full border-b border-blue-gray-500 
                                         bg-transparent pt-4 pb-1.5 font-matter 
                                         text-lg text-black 
@@ -122,7 +137,7 @@ function Contact() {
                 <div className=''>&copy;CodeVivek</div>
 
                 <div className='flex flex-col hover:text-gray-400'>
-                    <span>
+                    <span className='cursor-pointer duration-500 transition-all'>
                         Made with <span className='text-red-600'>❤</span> by Vivek
                     </span>
 

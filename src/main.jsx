@@ -2,17 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import LocomotiveScroll from 'locomotive-scroll';
-import { UniversalContextProvider } from './contexts/UniversalContext';
-import { ThemeProvider } from './contexts/ThemeContext'
-const scroll = new LocomotiveScroll();
+import { ThemeProvider } from './contexts/ThemeContext.jsx'
+import { CodeVivekUniversalContextProvider } from './contexts/CodeVivekUniversalContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
-      <UniversalContextProvider>
+      <CodeVivekUniversalContextProvider>
         <App />
-      </UniversalContextProvider>
+      </CodeVivekUniversalContextProvider>
     </ThemeProvider>
   </StrictMode>,
 )

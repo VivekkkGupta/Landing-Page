@@ -1,46 +1,55 @@
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useUniversalContext } from '../contexts/UniversalContext';
-import Projectpage from './Projectpage'; // Import Projectpage component
+import { useCodeVivekUniversalContext } from '../contexts/CodeVivekUniversalContext';
+import Projectpage from './Projectpage';
 
 function Projects() {
     const { scrollYProgress } = useScroll();
     const xMy = useTransform(scrollYProgress, [0, 1], ['0vw', '20vw']);
     const xProjects = useTransform(scrollYProgress, [0, 1], ['0vw', '20vw']);
     const xArrow = useTransform(scrollYProgress, [0, 1], ['0vw', '-20vw']);
-    const xRotate = useTransform(scrollYProgress, [0, 0.5], [0, 155]);
+    const xRotate = useTransform(scrollYProgress, [0, 1], [90, 180]);
 
-    const { ProjectsDataArray } = useUniversalContext(); // Access project data from context
-
+    const { ProjectsDataArray } = useCodeVivekUniversalContext()
     return (
         <>
             <motion.div
-                className='sticky top-0 bg-white text-black min-w-full h-[80vh] flex items-center justify-center z-[9] overflow-hidden'
+                className='relative bg-white text-black w-full h-full 
+                flex flex-col overflow-hidden'
+                id="projects"
             >
-                <div className='w-[80%] font-matter font-bold text-[8vw] leading-none'>
-                    <div>
-                        <motion.div className="" style={{ x: xMy }}>
-                            My
-                        </motion.div>
-                    </div>
-                    <div className='flex items-center justify-between pl-[10%]'>
-                        <motion.h2 style={{ x: xProjects }}>
-                            Projects
-                        </motion.h2>
-                        <motion.span className='' style={{ x: xArrow, rotate: xRotate }} aria-hidden="true">
-                            <FaArrowRight />
-                        </motion.span>
-                    </div>
-                    {/* Render each project using Projectpage component */}
+                <div className='w-[80%] h-[100vh] mx-auto font-matter font-bold text-[8vw] leading-none'>
+                    <div className='w-full h-full flex flex-col justify-center'>
 
+                        <div>
+                            <motion.div className="" style={{ x: xMy }}>
+                                My
+                            </motion.div>
+                        </div>
+                        <div className='flex items-center justify-between pl-[10%]'>
+                            <motion.h2 style={{ x: xProjects }}>
+                                Projects
+                            </motion.h2>
+                            <motion.span
+                                className=''
+                                style={{
+                                    x: xArrow,
+                                    rotate: xRotate
+                                }}
+                                aria-hidden="true">
+                                <FaArrowRight />
+                            </motion.span>
+                        </div>
+                    </div>
+                </div>
+                <div className="relative">
+                    {ProjectsDataArray.map((project) => (
+                        <Projectpage key={project.id} item={project} />
+                    ))}
                 </div>
             </motion.div>
-            <div className="mt-10 relative z-[99]">
-                {ProjectsDataArray.map((project) => (
-                    <Projectpage key={project.id} item={project} />
-                ))}
-            </div>
+
         </>
     );
 }

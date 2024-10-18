@@ -11,7 +11,7 @@ function Landingpage() {
     }
 
     return (
-        <div id="page1" className='z-[9] min-h-screen min-w-screen relative bg-black'>
+        <div id="home" className='z-[9] min-h-screen min-w-screen relative bg-black'>
             <video
                 src={Milkyway}
                 autoPlay
