@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         matter: ["Matter", "sans-serif"],
+        Roboto: ["Roboto"],
       },
     },
   },

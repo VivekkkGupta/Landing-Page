@@ -15,7 +15,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
             projecttag: ["Creative", "Website", "Animation", "Frontend"],
             projectdescription: "A modern typing Website to showcase your typing speed in with a good smooth typing experience.",
             projectyear: 2024,
-            projectlink: "",
+            projectlink: `/typeracer`,
             projectpreview: Milkyway3,
         },
         {
@@ -41,10 +41,6 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
         }
     };
 
-    const goToContactPage = () => {
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    }
-
 
     // Pass values as props
     const values = {
@@ -52,7 +48,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
         setActiveSection,
         handleActiveSection,
         ProjectsDataArray,
-        goToContactPage,
+
     };
 
     return (

@@ -1,12 +1,17 @@
 import React from 'react'
-import { motion } from "framer-motion"
 import vivekimage from "../assets/images/vivek-kerala-beach.jpg"
 import { FaArrowRight } from "react-icons/fa";
-import { useCodeVivekUniversalContext } from '../contexts/CodeVivekUniversalContext';
-
 function Aboutpage() {
 
-    const { goToContactPage } = useCodeVivekUniversalContext()
+    const goToContactPage = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({
+                behavior: 'smooth',  // Enables smooth scrolling
+                block: 'start',      // Scrolls to the top of the element
+            });
+        }
+    };
     return (
         <>
             <div className='h-[130vh] min-w-screen bg-transparent z-[-99]' id="about">
