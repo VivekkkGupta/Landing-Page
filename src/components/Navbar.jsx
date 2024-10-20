@@ -12,22 +12,10 @@ function Navbar() {
 
     return (
 
-        <nav className='w-full relative'>
-
-            {/* <div className='z-[99] fixed top-6 left-5 text-white dark:text-white border-4 p-2 bg-transparent'>
-                <h2 className='font-[700] tracking-widest'>
-                    VG
-                </h2>
-            </div> */}
-
-            {/* <div className='z-[999999] fixed top-6 right-5 text-black bg-gray-400 dark:text-white dark:bg-slate-900 rounded-full cursor-pointer
-            px-2 py-1'
-                onClick={toggleTheme}
-            >
-                <i className={`${theme === 'dark' ? "ri-moon-line" : "ri-sun-line"}`}></i>
-            </div> */}
+        <nav className='w-full lg:w-full relative'>
 
             <div className='z-[99] fixed top-5 left-[50%] -translate-x-[50%] bg-gray-300 dark:bg-black dark:bg-opacity-70 backdrop-blur-sm text-black dark:text-white text-lg rounded-full flex justify-center items-center font-matter cursor-pointer py-2 px-2 shadow-md shadow-gray-800'>
+
                 <div className='flex'>
 
                     {

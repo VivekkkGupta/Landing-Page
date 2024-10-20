@@ -23,23 +23,23 @@ function App() {
 
   const [blackScreen, setBlackScreen] = useState(true)
 
-  useEffect(() => {
-    setBlackScreen(true)
-    const timer = setTimeout(() => {
-      setBlackScreen(false);
-    }, 1000);
+  // useEffect(() => {
+  //   setBlackScreen(true)
+  //   const timer = setTimeout(() => {
+  //     setBlackScreen(false);
+  //   }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
       <Router>
         <div className='w-full min-h-screen'>
-          <div className={`z-[999] fixed top-0 left-0 bg-black w-full h-screen ${blackScreen ? 'visible' : 'hidden'}`}>
-          </div>
+          {/* <div className={`z-[999] fixed top-0 left-0 bg-black w-full h-screen ${blackScreen ? 'visible' : 'hidden'}`}>
+          </div> */}
           <Navbar />
-          <Preloader />
+          {/* <Preloader /> */}
           <Landingpage />
           <Aboutpage />
           <Projects />

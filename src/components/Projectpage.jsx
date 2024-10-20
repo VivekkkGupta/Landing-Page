@@ -8,36 +8,24 @@ function Projectpage({ item }) {
 
     const { scrollYProgress } = useScroll(); // Detect scroll progress
 
-    const CardWidth = useTransform(scrollYProgress, [0, 1], ['100%', '90%']);
-
-    const shrinkVariant = {
-        hidden: { scale: 1.1, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: { duration: 0.8, ease: "easeInOut" }
-        },
-        exit: {
-            scale: 0.9,
-            opacity: 0,
-            transition: { duration: 0.8, ease: "easeInOut" }
-        }
-    };
-
     return (
-        <motion.div className='relative w-full h-screen bg-transparent flex items-center justify-center'
+        <motion.div className='relative w-full h-screen flex items-center justify-center'
         >
-            <motion.div className='bg-black w-[80%] h-[80%] flex items-center justify-center rounded-[4vw] text-white font-matter shadow-lg shadow-gray-500'
+            <motion.div className='bg-black w-[95%] md:w-[80%] h-[85%] md:h-[80%] 
+            flex flex-col-reverse  items-center justify-center rounded-[4vw] text-white font-matter shadow-lg shadow-gray-500
+            md:flex-row
+            '
             >
-                <div className='w-1/2 h-full p-10 flex items-start justify-between flex-col'>
-                    <h2 className='text-[6vw] font-bold leading-tight'>
+                <div className='w-full md:w-1/2 h-full p-5 md:p-10 flex items-start justify-between flex-col'>
+                    <h2 className='text-4xl text-center md:text-left md:text-[6vw] font-bold leading-tight'>
                         {projectname}
                     </h2>
 
-                    <div className="tags">
+                    <div className="tags w-full py-2 overflow-x-auto scrollbar-hide md:overflow-hidden">
                         {
                             projecttag.map((tag, index) => (
-                                <span key={index} className='bg-black border-2 border-grey-200 px-3 py-1.5 mr-2 rounded-full hover:text-black hover:bg-white
+                                <span key={index} className='bg-black border-2 border-grey-200 px-3 py-1.5 mr-2 rounded-full 
+                                hover:text-black hover:bg-white
                                 transition-all duration-500 ease-in-out cursor-pointer
                                 '>
                                     {tag}
@@ -49,10 +37,10 @@ function Projectpage({ item }) {
                         {projectdescription}
                     </p>
 
-                    <div className='flex justify-between items-center w-full '>
+                    <div className='flex justify-between items-center w-full'>
                         <Link
                             to={projectlink}
-                            className={`bg-transparent text-white rounded-full px-10 py-5 text-2xl border-2 
+                            className={`bg-transparent text-white rounded-full px-7 py-3 md:px-10 md:py-5 text-2xl border-2 
                         hover:bg-white hover:text-black group hover:gap-10
                         transition-all ease-in-out duration-500 flex items-center gap-6
                         ${!projectlink ? "pointer-events-none opacity-50" : ""}
@@ -68,8 +56,8 @@ function Projectpage({ item }) {
                         </p>
                     </div>
                 </div>
-                <div className='w-1/2 h-full flex items-center justify-center'>
-                    <div className=' w-[85%] h-[85%] rounded-tr-[9vw] overflow-hidden  shadow-lg shadow-gray-800'>
+                <div className='w-full md:w-1/2 h-full flex items-center justify-center'>
+                    <div className=' w-[85%] h-[85%] rounded-tr-[9vw] overflow-hidden  shadow-lg shadow-gray-700  border-2 md:border-0'>
                         <video src={projectpreview}
                             autoPlay
                             loop

@@ -23,7 +23,7 @@ function Landingpage() {
 
             <div className='cursor-default absolute flex items-center justify-center top-0 h-full w-full text-white'>
                 <div className='flex items-center justify-center w-[80%] h-[80%]'>
-                    <div className='text-[7vw] font-bold tracking-tighter leading-none'>
+                    <div className='text-[13vw] md:text-[7vw] font-bold md:tracking-tighter leading-none'>
                         <div className="overflow-hidden">
                             <motion.div
                                 variants={showupvariant}

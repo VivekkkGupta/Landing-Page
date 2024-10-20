@@ -128,19 +128,19 @@ const Contact = () => {
 
     return (
         <div className='relative bg-black h-screen min-w-screen text-white font-matter' id='contact'>
-            <div className='w-full h-[90vh] flex'>
-                <div className='w-1/2 flex items-center justify-center'>
-                    <div className='relative m-[5vw] text-[6vw] text-bold leading-none tracking-tight'>
+            <div className='w-full h-[90vh] flex flex-col md:flex-row'>
+                <div className='w-full h-1/2 md:h-full md:w-1/2 flex items-center justify-center'>
+                    <div className='relative m-[10vw] md:m-[5vw] text-[12vw] md:text-[6vw] text-bold leading-none tracking-tight'>
                         <p>
                             Good things happen when you say <span className='underline'>hey</span>
                         </p>
-                        <span className='absolute right-5 rotate-[-30deg] hover:rotate-[-45deg] hover:right-0 transition-all duration-500 ease-in-out'>
+                        <span className='absolute right-5 md:right-5 rotate-[120deg] md:rotate-[-30deg] hover:rotate-[-45deg] hover:right-0 transition-all duration-500 ease-in-out'>
                             <FaArrowRight />
                         </span>
                     </div>
                 </div>
 
-                <div className='contactmodal w-1/2 flex items-center justify-center'>
+                <div className='w-full h-1/2 md:h-full md:w-1/2 flex items-center justify-center'>
                     <div className='bg-white text-black w-[80%] h-[80%] rounded-tr-[5vw] flex items-center justify-between px-[4vw]'>
 
                         <form onSubmit={formSubmit}>
@@ -228,8 +228,11 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className='absolute footer w-full h-[10vh] bottom-0 left-0 flex justify-between items-center px-12 py-5'>
-                <div className='socials flex items-center justify-center gap-2 cursor-pointer'>
+            <div className='absolute footer w-full h-[10vh] bottom-0 left-0 flex 
+            flex-col
+            md:justify-between md:flex-row items-center md:px-12 md:py-5
+            '>
+                <div className='w-full flex items-center justify-center gap-2 cursor-pointer'>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
                         <a href="https://www.instagram.com/vivekguptaaa/" target='_blank'>
                             <FaInstagram />

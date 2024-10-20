@@ -19,9 +19,9 @@ function Projects() {
                 flex flex-col overflow-hidden'
                 id="projects"
             >
-                <div className='w-[80%] h-[100vh] mx-auto font-matter font-bold text-[8vw] leading-none'>
-                    <div className='w-full h-full flex flex-col justify-center'>
+                <div className='w-full md:w-[80%] h-[30vh] md:h-[100vh] mx-auto font-matter font-bold text-[12vw] md:text-[8vw] leading-none'>
 
+                    <div className='w-full h-full flex flex-col justify-center'>
                         <div>
                             <motion.div className="" style={{ x: xMy }}>
                                 My

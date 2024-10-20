@@ -21,7 +21,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
         {
             id: 2,
             projectname: "Trello",
-            projecttag: ["Web App", "Task Tracker Tool", "Todo List"],
+            projecttag: ["Web App", "Task Tracker Tool"],
             projectdescription: "A task tracker tool for managers and employees, which will make the task tracking easy.",
             projectyear: 2024,
             projectlink: "",
