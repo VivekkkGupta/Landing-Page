@@ -27,7 +27,7 @@ function Navbar() {
                 <i className={`${theme === 'dark' ? "ri-moon-line" : "ri-sun-line"}`}></i>
             </div> */}
 
-            <div className='z-[99] fixed top-5 left-[50%] -translate-x-[50%] bg-gray-300 dark:bg-black dark:bg-opacity-70 backdrop-blur-sm text-black dark:text-white text-lg rounded-full flex justify-center items-center font-matter cursor-pointer py-2 px-2'>
+            <div className='z-[99] fixed top-5 left-[50%] -translate-x-[50%] bg-gray-300 dark:bg-black dark:bg-opacity-70 backdrop-blur-sm text-black dark:text-white text-lg rounded-full flex justify-center items-center font-matter cursor-pointer py-2 px-2 shadow-md shadow-gray-800'>
                 <div className='flex'>
 
                     {

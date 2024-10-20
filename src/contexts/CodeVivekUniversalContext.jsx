@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import Milkyway3 from "../assets/videos/Milkyway_3.mp4";  // Ensure you import the asset
+import Typeracer_Trim from '../assets/videos/Typeracer_Trim.mp4'
 
 const CodeVivekUniversalContext = createContext();
 
@@ -16,7 +16,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
             projectdescription: "A modern typing Website to showcase your typing speed in with a good smooth typing experience.",
             projectyear: 2024,
             projectlink: `/typeracer`,
-            projectpreview: Milkyway3,
+            projectpreview: Typeracer_Trim,
         },
         {
             id: 2,

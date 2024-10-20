@@ -231,19 +231,29 @@ const Contact = () => {
             <div className='absolute footer w-full h-[10vh] bottom-0 left-0 flex justify-between items-center px-12 py-5'>
                 <div className='socials flex items-center justify-center gap-2 cursor-pointer'>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
-                        <FaInstagram />
+                        <a href="https://www.instagram.com/vivekguptaaa/" target='_blank'>
+                            <FaInstagram />
+                        </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
-                        <FaGithub />
+                        <a href="https://github.com/VivekkkGupta" target='_blank'>
+                            <FaGithub />
+                        </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
-                        <FaLinkedinIn />
+                        <a href="https://www.linkedin.com/in/vivekguptaaa/" target='_blank'>
+                            <FaLinkedinIn />
+                        </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
-                        <BiLogoGmail />
+                        <a href="mailto:guptavivek1035@gmail.com" target='_blank'>
+                            <BiLogoGmail />
+                        </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
-                        <FaXTwitter />
+                        <a href="https://x.com/vivekkkgupta" target='_blank'>
+                            <FaXTwitter />
+                        </a>
                     </span>
                 </div>
                 <div>&copy;CodeVivek</div>

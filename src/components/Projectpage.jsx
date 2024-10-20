@@ -27,7 +27,7 @@ function Projectpage({ item }) {
     return (
         <motion.div className='relative w-full h-screen bg-transparent flex items-center justify-center'
         >
-            <motion.div className='bg-black w-[80%] h-[80%] flex items-center justify-center rounded-[4vw] text-white font-matter'
+            <motion.div className='bg-black w-[80%] h-[80%] flex items-center justify-center rounded-[4vw] text-white font-matter shadow-lg shadow-gray-500'
             >
                 <div className='w-1/2 h-full p-10 flex items-start justify-between flex-col'>
                     <h2 className='text-[6vw] font-bold leading-tight'>
@@ -69,7 +69,7 @@ function Projectpage({ item }) {
                     </div>
                 </div>
                 <div className='w-1/2 h-full flex items-center justify-center'>
-                    <div className=' w-[85%] h-[85%] rounded-tr-[9vw] overflow-hidden'>
+                    <div className=' w-[85%] h-[85%] rounded-tr-[9vw] overflow-hidden  shadow-lg shadow-gray-800'>
                         <video src={projectpreview}
                             autoPlay
                             loop
