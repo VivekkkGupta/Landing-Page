@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import { useCodeVivekUniversalContext } from '../contexts/CodeVivekUniversalContext'
 import { useThemeContext } from '../contexts/ThemeContext'
@@ -8,6 +8,7 @@ function Navbar() {
     const { activeSection, handleActiveSection } = useCodeVivekUniversalContext()
     const { theme, toggleTheme } = useThemeContext()
 
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false)
     const menuItems = ["Home", "About", "Projects", "Contact"]
 
     return (
@@ -21,7 +22,7 @@ function Navbar() {
                     {
                         menuItems.map((item, index) => (
                             <motion.div
-                                className={`flex items-center px-8 py-2 hover:text-gray-200 dark:hover:text-zinc-300 duration-500 transition-all z-[99]
+                                className={`flex items-center px-3 py-1 md:px-8 md:py-2 hover:text-gray-200 dark:hover:text-zinc-300 duration-500 transition-all z-[99]
                             ${activeSection === item.toLowerCase() ? "bg-gray-300 dark:bg-slate-900 rounded-full backdrop-blur-lg" : ""}
                             `}
                                 key={index}

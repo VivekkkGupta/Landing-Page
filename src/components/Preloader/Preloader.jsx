@@ -34,7 +34,7 @@ const Preloader = () => {
                     variants={slideVariants}
                 >
                     <div className="text-center text-white flex items-center justify-center flex-col gap-5">
-                        <h1 className="text-6xl font-bold mb-4 animate-pulse">
+                        <h1 className="text-2xl md:text-6xl font-bold mb-4 animate-pulse">
                             Great Things Takes Time</h1>
                         <div className="w-12 h-12 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
                     </div>

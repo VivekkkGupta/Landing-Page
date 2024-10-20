@@ -134,14 +134,14 @@ const Contact = () => {
                         <p>
                             Good things happen when you say <span className='underline'>hey</span>
                         </p>
-                        <span className='absolute right-5 md:right-5 rotate-[120deg] md:rotate-[-30deg] hover:rotate-[-45deg] hover:right-0 transition-all duration-500 ease-in-out'>
+                        <span className='absolute right-5 md:right-5 rotate-[120deg] md:rotate-[-30deg] hover:rotate-[140deg] md:hover:rotate-[-45deg] hover:right-0 transition-all duration-500 ease-in-out'>
                             <FaArrowRight />
                         </span>
                     </div>
                 </div>
 
                 <div className='w-full h-1/2 md:h-full md:w-1/2 flex items-center justify-center'>
-                    <div className='bg-white text-black w-[80%] h-[80%] rounded-tr-[5vw] flex items-center justify-between px-[4vw]'>
+                    <div className='bg-white text-black w-[80%] h-[80%] rounded-tr-[5vw] flex items-center justify-between px-[4vw] shadow-lg shadow-gray-500'>
 
                         <form onSubmit={formSubmit}>
                             <div className="w-full flex flex-col">
@@ -232,30 +232,30 @@ const Contact = () => {
             flex-col
             md:justify-between md:flex-row items-center md:px-12 md:py-5
             '>
-                <div className='w-full flex items-center justify-center gap-2 cursor-pointer'>
-                    <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
+                <div className='flex items-center justify-center gap-2 cursor-pointer'>
+                    <span className=' hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
                         <a href="https://www.instagram.com/vivekguptaaa/" target='_blank'>
-                            <FaInstagram />
+                            <FaInstagram className='w-8 h-8 md:w-5 md:h-5' />
                         </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
                         <a href="https://github.com/VivekkkGupta" target='_blank'>
-                            <FaGithub />
+                            <FaGithub className='w-8 h-8 md:w-5 md:h-5' />
                         </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
                         <a href="https://www.linkedin.com/in/vivekguptaaa/" target='_blank'>
-                            <FaLinkedinIn />
+                            <FaLinkedinIn className='w-8 h-8 md:w-5 md:h-5' />
                         </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
                         <a href="mailto:guptavivek1035@gmail.com" target='_blank'>
-                            <BiLogoGmail />
+                            <BiLogoGmail className='w-8 h-8 md:w-5 md:h-5' />
                         </a>
                     </span>
                     <span className='hover:bg-white hover:rounded-full hover:text-black p-2 transition-all duration-200 ease-in'>
                         <a href="https://x.com/vivekkkgupta" target='_blank'>
-                            <FaXTwitter />
+                            <FaXTwitter className='w-8 h-8 md:w-5 md:h-5' />
                         </a>
                     </span>
                 </div>
