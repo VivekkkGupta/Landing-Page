@@ -141,7 +141,7 @@ const Contact = () => {
                 </div>
 
                 <div className='w-full h-1/2 md:h-full md:w-1/2 flex items-center justify-center'>
-                    <div className='bg-white text-black w-[80%] h-[80%] rounded-tr-[5vw] flex items-center justify-between px-[4vw] shadow-lg shadow-gray-500'>
+                    <div className='bg-white text-black h-[90%] w-[90%] md:mx-auto md:w-[80%] md:h-[80%] rounded-tr-[5vw] flex items-center justify-between px-5 py-5 md:px-[4vw] shadow-lg shadow-gray-500'>
 
                         <form onSubmit={formSubmit}>
                             <div className="w-full flex flex-col">
@@ -228,7 +228,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className='absolute footer w-full h-[10vh] bottom-0 left-0 flex 
+            <div className='absolute footer w-full bottom-0 left-0 flex 
             flex-col
             md:justify-between md:flex-row items-center md:px-12 md:py-5
             '>
