@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Projectpage from './components/Projectpage';
 import Contact from './components/Contact';
 import Blogs from './components/Blogs';
+import MyResume from './components/MyResume'
 import { useCodeVivekUniversalContext } from './contexts/CodeVivekUniversalContext';
 import { useThemeContext } from './contexts/ThemeContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -33,22 +34,24 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Router>
-        <div className='w-full min-h-screen'>
-          <div className={`z-[999] fixed top-0 left-0 bg-black w-full h-screen ${blackScreen ? 'visible' : 'hidden'}`}>
-          </div>
-          <Navbar />
-          <Preloader />
-          <Landingpage />
-          <Aboutpage />
-          <Projects />
-          <Contact />
-          {/* <Routes>
-          </Routes> */}
-        </div>
-      </Router>
-    </>
+    <Router>
+      <div className='w-full min-h-screen'>
+        <div className={`z-[999] fixed top-0 left-0 bg-black w-full h-screen ${blackScreen ? 'visible' : 'hidden'}`}></div>
+        <Preloader />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <Landingpage />
+              <Aboutpage />
+              <Projects />
+              <Contact />
+            </>
+          } />
+          <Route path="/resume" element={<MyResume />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
