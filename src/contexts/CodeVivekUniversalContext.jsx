@@ -15,7 +15,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
             projecttag: ["Creative", "Website", "Animation", "Frontend"],
             projectdescription: "A modern typing Website to showcase your typing speed in with a good smooth typing experience.",
             projectyear: 2024,
-            projectlink: `https://aethetictyping.developervivek.com/`,
+            projectlink: `https://aesthetictyping.developervivek.com/`,
             projectpreview: Typeracer_Trim,
         },
         {
