@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import Typeracer_Trim from '../assets/videos/Typeracer_Trim.mp4'
+import Scroll_Master_Preview from '../assets/videos/Scroll_Master_Preview.mp4'
 
 const CodeVivekUniversalContext = createContext();
 
@@ -20,6 +21,15 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
         },
         {
             id: 2,
+            projectname: "Scroll Master",
+            projecttag: ["Chrome Extension", "Auto Scroll", "Auto Tab Change"],
+            projectdescription: "This extension automates scrolling on webpages and switches to the next tab based on a list of links you provide.",
+            projectyear: 2024,
+            projectlink: `https://scrollmaster.developervivek.com/`,
+            projectpreview: Scroll_Master_Preview,
+        },
+        {
+            id: 3,
             projectname: "Trello",
             projecttag: ["Web App", "Task Tracker Tool"],
             projectdescription: "A task tracker tool for managers and employees, which will make the task tracking easy.",

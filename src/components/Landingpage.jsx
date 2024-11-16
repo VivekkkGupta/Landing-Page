@@ -1,5 +1,5 @@
 import React from 'react';
-import Milkyway from '../assets/videos/Milkyway_1.mp4';
+import Milkyway from '../assets/videos/Milkyway_1.webp';
 import { IoCodeSlash } from "react-icons/io5";
 import { motion } from "framer-motion";
 
@@ -12,12 +12,12 @@ function Landingpage() {
 
     return (
         <div id="home" className='z-[9] min-h-screen min-w-screen relative bg-black'>
-            <video
+            <img
                 src={Milkyway}
-                autoPlay
-                loop
-                muted
-                playsInline
+                // autoPlay
+                // loop
+                // muted
+                // playsInline
                 className='absolute top-0 left-0 w-full h-full object-cover opacity-40'
             />
 

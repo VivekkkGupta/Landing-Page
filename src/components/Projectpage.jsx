@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Link } from 'react-router-dom'
 
 function Projectpage({ item }) {
     const { projectname, projecttag, projectdescription, projectlink, projectpreview, projectyear } = item;
@@ -38,8 +37,9 @@ function Projectpage({ item }) {
                     </p>
 
                     <div className='flex justify-between items-center w-full'>
-                        <Link
-                            to={projectlink}
+                        <a
+                            href={projectlink}
+                            target='_blank'
                             className={`bg-transparent text-white rounded-full px-7 py-3 md:px-10 md:py-5 text-2xl border-2 
                         hover:bg-white hover:text-black group hover:gap-10
                         transition-all ease-in-out duration-500 flex items-center gap-6
@@ -50,7 +50,7 @@ function Projectpage({ item }) {
                             <span className='group-hover:rotate-[-45deg] text-white transition-all duration-500 ease-in-out group-hover:text-black' id="getintoucharrow">
                                 <FaArrowRight />
                             </span>
-                        </Link>
+                        </a>
                         <p className='text-gray-300'>
                             {projectyear}
                         </p>
