@@ -12,6 +12,15 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
     const ProjectsDataArray = [
         {
             id: 1,
+            projectname: "Trello",
+            projecttag: ["Task Manager", "Task Tracker Tool"],
+            projectdescription: "A task tracker tool for managers and employees, which will make the task tracking easy.",
+            projectyear: 2024,
+            projectlink: "https://trellotaskmanager.developervivek.com/",
+            projectpreview: "",
+        },
+        {
+            id: 2,
             projectname: "Aesthetic Typing",
             projecttag: ["Creative", "Website", "Animation", "Frontend"],
             projectdescription: "A modern typing Website to showcase your typing speed in with a good smooth typing experience.",
@@ -20,7 +29,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
             projectpreview: Typeracer_Trim,
         },
         {
-            id: 2,
+            id: 3,
             projectname: "Scroll Master",
             projecttag: ["Chrome Extension", "Auto Scroll", "Auto Tab Change"],
             projectdescription: "This extension automates scrolling on webpages and switches to the next tab based on a list of links you provide.",
@@ -28,15 +37,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
             projectlink: `https://scrollmaster.developervivek.com/`,
             projectpreview: Scroll_Master_Preview,
         },
-        {
-            id: 3,
-            projectname: "Trello",
-            projecttag: ["Web App", "Task Tracker Tool"],
-            projectdescription: "A task tracker tool for managers and employees, which will make the task tracking easy.",
-            projectyear: 2024,
-            projectlink: "",
-            projectpreview: "https://sumatran.cat/google-io-countdown.5f03776a.mp4",
-        },
+
     ];
 
     // Universal useStates
