@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import Typeracer_Trim from '../assets/videos/Typeracer_Trim.mp4'
 import Scroll_Master_Preview from '../assets/videos/Scroll_Master_Preview.mp4'
+import Trello_Preview from '../assets/videos/TrelloPreview1.mp4'
 
 const CodeVivekUniversalContext = createContext();
 
@@ -17,7 +18,7 @@ export const CodeVivekUniversalContextProvider = ({ children }) => {
             projectdescription: "A task tracker tool for managers and employees, which will make the task tracking easy.",
             projectyear: 2024,
             projectlink: "https://trellotaskmanager.developervivek.com/",
-            projectpreview: "",
+            projectpreview: Trello_Preview,
         },
         {
             id: 2,
